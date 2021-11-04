@@ -34,13 +34,12 @@ public class Question2 {
 
         Scanner scan = new Scanner(System.in);
 
-        //System.out.print("요솟수는 ：");
-        int num = scan.nextInt(); // 요솟수
+        System.out.print("요솟수 : ");
+        int num = scan.nextInt();
 
-        int[] x = new int[num]; // 요솟수 num인 배열
+        int[] x = new int[num];
 
         for (int i = 0; i < num; i++) {
-            //System.out.print("x[" + i + "] : ");
             x[i] = scan.nextInt();
         }
 
