@@ -1,5 +1,6 @@
-package level1;
+package level1.숫자_문자열과_영단어;
 
+//숫자 문자열과 영단어
 public class Solution {
 
     public static int solution (String s) {
