@@ -2,15 +2,15 @@ package level1.짝수와_홀수;
 
 public class Solution {
 
-    public static String solution(int num) {
-        String answer = "";
+    String evenOrOdd(int num) {
+        return num % 2 == 0 ? "Even": "Odd";
+    }
 
-        if (num % 2 == 0) {
-            answer = "Even";
-        }
-        if (num % 2 != 0) {
-            answer = "Odd";
-        }
-        return answer;
+    public static void main(String[] args) {
+        //String str = "1 2 3 4";
+        Solution evenOrOdd = new Solution();
+
+        System.out.println("결과 : " + evenOrOdd.evenOrOdd(6));
+        System.out.println("결과 : " + evenOrOdd.evenOrOdd(5));
     }
 }
