@@ -1,19 +1,18 @@
 package level1.평균_구하기;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution {
 
     public static double solution(int[] arr) {
+        return (double) Arrays.stream(arr).average().orElse(0);
+    }
 
-        double answer = 0;
-        double sum = 0;
+    public static void main(String[] args) {
 
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
-        }
-        answer = sum / arr.length;
-
-        return answer;
+        int x[] = {1, 2, 3, 4};
+        System.out.println("평균값 : " + solution(x));
     }
 }
+
