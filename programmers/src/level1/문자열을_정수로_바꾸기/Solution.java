@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Solution {
 
     public int solution(String s) {
-        int answer = Integer.parseInt(s);
-        return answer;
+        return Integer.valueOf(s);
     }
 }
