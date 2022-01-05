@@ -10,7 +10,7 @@ public class Solution {
 
 		char[] sArr = s.toCharArray();  // String을 정렬하기 위해 char[] 캐릭터 배열로 변형
 		Arrays.sort(sArr); //문자를 뒤집기 위해 오름차순으로 정렬
-		
+
 		return new StringBuilder(new String(sArr)).reverse().toString();
 	}
 
