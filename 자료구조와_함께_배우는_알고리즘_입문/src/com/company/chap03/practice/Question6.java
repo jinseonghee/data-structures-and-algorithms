@@ -31,9 +31,12 @@ public class Question6 {
 
 		int idx = Arrays.binarySearch(x, ky);
 
-		if (idx < 0)
-			System.out.println("삽입 포인트는 " + idx + "입니다.");
-		else
+		if (idx < 0) {
+			int insPoint = -idx - 1; // 삽입 포인트 = -(반환값 = -삽입포인트 -1) - 1
+			System.out.println("그 값의 요소가 없습니다.");
+			System.out.printf("삽입 포인트는 %d입니다.\n", insPoint);
+			System.out.printf("x[%d]의 바로 앞에 %d를 삽입하면 배열의 정렬 상태가 유지됩니다.", insPoint, ky);
+		} else
 			System.out.println(ky + "은(는) x[" + idx + "]에 있습니다. ");
 	}
 }
