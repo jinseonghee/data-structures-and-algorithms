@@ -47,7 +47,7 @@ public class IntQueue {
 		if (num <= 0)
 			throw new EmptyIntQueueException(); // 큐가 비어있음.
 		int x = que[front++]; //front를 deque 하면 front 값을 1 증가
-		num --; // 데이터 갯수는 줄어드니 num을 1 감소
+		num--; // 데이터 갯수는 줄어드니 num을 1 감소
 		if (front == max) // 인덱스 초과 문제
 			front = 0; // front가 deque되어 front 값이 1 증가 되어 max값과 같아지면 배열의 처음인 0으로 변경
 		return x;
@@ -62,7 +62,7 @@ public class IntQueue {
 
 	//큐에서 x를 검색하여 인덱스(찾지 못하면 -1)을 반환
 	public int indexOf(int x) {
-		for(int i =0; i < num; i++) {
+		for (int i = 0; i < num; i++) {
 			int idx = (i + front) % max; //프론트 부터 선형검색 해주기 위해
 			if (que[idx] == x) //검색 성공
 				return idx;
@@ -104,6 +104,15 @@ public class IntQueue {
 				System.out.print(que[i] + " ");
 			System.out.println();
 		}
+	}
+
+	public int search(int x) {
+		for (int i = 0; i < num; i++) {
+			if (que[(i + front) % max] == x)
+				return i + 1;
+			return i;
+		}
+		return 0;
 	}
 }
 
