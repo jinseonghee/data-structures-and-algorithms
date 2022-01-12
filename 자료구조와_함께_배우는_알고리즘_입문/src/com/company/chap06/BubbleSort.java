@@ -13,7 +13,7 @@ public class BubbleSort {
 
 	static void bubbleSort(int[] a, int n) {
 		for(int i = 0; i < n - 1; i++)
-			for(int j = n -1; j > i; j--) //패스
+			for(int j = n -1; j > i; j--) // 수행하는 패스의 횟수가 n -1인 이유는 n - 1개 요소의 정렬이 끝나면 마지막 요소는 이미 끝에 놓임.
 				if (a[j - 1] > a[j])
 					swap(a, j - 1, j);
 	}
