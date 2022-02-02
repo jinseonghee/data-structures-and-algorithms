@@ -6,7 +6,7 @@ public class Solution {
 		int answer = 0;
 		int count = 0;
 
-		for (int i = 13; i <= right; i++) {
+		for (int i = left; i <= right; i++) {
 			count = 0;
 			for (int j = 1; j <= i; j++) {
 				if (i % j == 0) {
@@ -14,6 +14,7 @@ public class Solution {
 					count++;
 				}
 			}
+
 			if (count % 2 == 0) {
 				answer += i;
 			} else {
@@ -24,6 +25,6 @@ public class Solution {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(solution(13, 17));
+		System.out.println(solution(24, 27));
 	}
 }
