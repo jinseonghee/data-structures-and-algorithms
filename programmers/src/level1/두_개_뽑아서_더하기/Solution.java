@@ -8,23 +8,25 @@ public class Solution {
 
 	public static int[] solution(int[] numbers) {
 
-		Arrays.sort(numbers);
-		System.out.println(Arrays.toString(numbers));
-		int answer;
+		int result;
 
 		List<Integer> list = new ArrayList<>();
 
-		for( int i = 0; i < numbers.length; i++) {
-			for ( int j = i + 1; j < numbers.length; j++) {
-				answer = numbers[i] + numbers[j];
-				if(!list.contains(answer)) {
-					list.add(answer);
+		for (int i = 0; i < numbers.length; i++) {
+			for (int j = i + 1; j < numbers.length; j++) {
+				result = numbers[i] + numbers[j];
+				if (!list.contains(result)) {
+					list.add(result);
 				}
 			}
 		}
-		return list.stream().mapToInt(i->i).toArray();
+		int[] answer = new int[list.size()];
+		for (int i = 0; i < list.size(); i++) {
+			answer[i] = list.get(i);
+		}
+		Arrays.sort(answer);
+		return answer;
 	}
-
 
 	public static void main(String[] args) {
 
