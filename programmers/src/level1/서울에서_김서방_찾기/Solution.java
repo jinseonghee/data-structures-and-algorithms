@@ -7,10 +7,13 @@ public class Solution {
 
     public static String solution(String[] seoul) {
 
-        Arrays.asList(seoul);
-        int result = Arrays.asList(seoul).indexOf("kim");
-        String answer = "김서방은 " + result + "에 있다.";
-        return answer;
+
+        //Arrays.asList(seoul);
+
+        int result = Arrays.binarySearch(seoul, "kim");
+        //int result = Arrays.asList(seoul).indexOf("kim");
+
+        return "김서방은 " + result + "에 있다.";
     }
 
     public static void main(String[] args) {
